@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Sports</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #03ca77, #3d1146);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #000000;
+            border-radius: 4px;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .hero button {
+            background-color: #24580f;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #feb47b;
+            transform: scale(1.1);
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .article {
+            background-color: #149e69;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 45%;
+            margin: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonials {
+            background-color: #0f2b16;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 300px;
+        }
+
+        .gallery {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form {
+            background-color: #03693f;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #312f31;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #03ca77;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #028a5e;
+            transform: scale(1.1);
+        }
+
+        .about {
+            background-color: #04ce58;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            background-color: #054921;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .faq h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .faq p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .faq .answer {
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>Welcome to Our Health and Sports Page</h1>
+        <p>Stay fit and healthy with our tips and articles.</p>
+        <button onclick="alert('Join Us!')">Join Us</button>
+    </div>
+
+    <div class="content" id="articles">
+        <h1>Our Articles</h1>
+        <p>Stay fit and healthy with our tips and articles.</p>
+        <div class="articles">
+            <div class="article">
+                <h2>Healthy Eating</h2>
+                <p>Learn about the best foods to keep you healthy and fit.</p>
+            </div>
+            <div class="article">
+                <h2>Exercise Tips</h2>
+                <p>Discover the best exercises to stay in shape.</p>
+            </div>
+            <div class="article">
+                <h2>Mental Health</h2>
+                <p>Tips and advice on maintaining good mental health.</p>
+            </div>
+            <div class="article">
+                <h2>Sports Nutrition</h2>
+                <p>Nutrition tips for athletes and active individuals.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials" id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"This website has changed my life! The tips and articles are amazing."</p>
+            <p>- Omar Hamed</p>
+        </div>
+        <div class="testimonial">
+            <p>"I love the exercise tips. They are easy to follow and very effective."</p>
+            <p>- Jana Elbayar</p>
+        </div>
+        <div class="testimonial">
+            <p>"The nutrition advice has helped me improve my diet significantly."</p>
+            <p>- Ahmed Ali</p>
+        </div>
+        <div class="testimonial">
+            <p>"Great content and very informative. Highly recommend!"</p>
+            <p>- mariam adel</p>
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <img src="C:\Users\volt\Pictures\Saved Pictures\firewatch-4k-best-wallpaper-preview.jpg" alt="Gallery Image 1">
+        <img src="C:\Users\volt\Pictures\Saved Pictures\17525.jpg" alt="Gallery Image 2">
+        <img src="C:\Users\volt\Pictures\Saved Pictures\4k-background-fd313fxzl511betu.jpg" alt="Gallery Image 3">
+    </div>
+
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best health and sports advice to help you stay fit and healthy. Our team of experts is here to guide you on your journey to a healthier lifestyle.</p>
+        <p>Our mission is to empower individuals with the knowledge and tools they need to achieve their health and fitness goals. Whether you're looking for nutrition tips, exercise routines, or mental health advice, we've got you covered.</p>
+    </div>
+
+    <div class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="question">Q: How often should I exercise?</div>
+        <div class="answer">A: It's recommended to exercise at least 3-4 times a week for optimal health benefits.</div>
+        <div class="question">Q: What are the best foods for a healthy diet?</div>
+        <div class="answer">A: A balanced diet with plenty of fruits, vegetables, lean proteins, and whole grains is best for maintaining good health.</div>
+        <div class="question">Q: How can I improve my mental health?</div>
+        <div class="answer">A: Regular exercise, a healthy diet, adequate sleep, and mindfulness practices can all contribute to better mental health.</div>
+        <div class="question">Q: What should I eat before a workout?</div>
+        <div class="answer">A: A small meal or snack with carbohydrates and protein, such as a banana with peanut butter, is ideal before a workout.</div>
+    </div>
+
+    <div class="contact-form" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    
+
+</body>
+
+</html>
